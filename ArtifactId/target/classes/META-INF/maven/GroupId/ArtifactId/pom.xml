@@ -1,0 +1,132 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>GroupId</groupId>
+	<artifactId>ArtifactId</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>ArtifactId</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<jdk-version>1.8</jdk-version>
+		<source-encoding>UTF-8</source-encoding>
+		<resource-encoding>UTF-8</resource-encoding>
+		<deploy-path>../deploy</deploy-path>
+		<lucy-version>1.7.5-SNAPSHOT</lucy-version>
+		<springframework-version>3.0.7.RELEASE</springframework-version>
+	</properties>
+	
+	<profiles>
+		<profile>
+			<id>local</id>
+			<properties>
+				<env>local</env>
+			</properties>
+		</profile>
+		
+		<profile>
+			<id>dev</id>
+			<properties>
+			<env>dev</env>
+			</properties>
+		</profile>
+		
+		<profile>
+			<id>alpha</id>
+			<properties>
+			<env>alpha</env>
+			</properties>
+		</profile>
+		
+		<profile>
+			<id>beta</id>
+			<properties>
+			<env>beta</env>
+			</properties>
+		</profile>
+		
+		<profile>
+			<id>release</id>
+			<properties>
+			<env>release</env>
+			</properties>
+		</profile>
+	</profiles>
+	
+	
+	<repositories>
+		<repository>
+			<id> nhn.release</id>
+			<name>NAVER Release Repository</name>
+			<url>http://repo.nhncorp.com/maven2</url>
+		</repository>
+		<repository>
+			<id>nhn.snapshot</id>
+			<name>NAVER Snapshot Repository</name>
+			<url>http://repo.nhncorp.com/m2-snapshot-repository/</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+		</repository>
+	</repositories>
+	
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.nhncorp.lucy</groupId>
+			<artifactId>lucy-core</artifactId>
+			<version>1.7.4</version>
+			<scope>compile</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>com.nhncorp.lucy</groupId>
+					<artifactId>lucy-xss</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>3.1.0.RELEASE</version>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
+	
+	<build>
+	<finalName>ArtifactId</finalName> 
+	<sourceDirectory>src/java</sourceDirectory>
+	<testSourceDirectory>src/test</testSourceDirectory>
+	<resources>
+		<resource>	
+			<directory>src/main/resources</directory>
+		</resource>
+		<resource>
+			<directory>src/main/resources-${env}</directory>
+		</resource>
+	</resources>
+			
+	<plugins>
+		<plugin>
+			<artifactId>maven-surefire-plugin</artifactId>
+			<configuration>
+				<excludes>
+					<exclude>**/Mock*</exclude>
+				</excludes>
+			</configuration>
+		</plugin>
+	</plugins>
+	</build>
+	
+</project>

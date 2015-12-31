@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>HTML&CSS::test</title>
+  <style>
+    h1{border:1px dashed #333}
+    div{background:#eee;width:300px;padding:10px}
+    .text{border:1px solid #ccc}
+    #text{border:1px solid #f00;margin:10px}
+    ul{background:#333;width:200px}
+    ul li{color:#fff;padding:10px 0;border-bottom:1px dotted #fff}
+    ul.list2{background:#fff;width:500px}
+    .list2 li{color:#333;padding:10px 0;border-bottom:1px dotted #333}
+    .list li:first-child{color:#f1f65b}
+    .list li>span{background:#f65b5b}
+    /*.list li:nth-child(2n-1){background:#2fc0bb}*/
+    /*.list li:nth-last-child(2n-1){background:#2fc0bb}*/
+    /*.list li:nth-of-type(2n){background:#2fc0bb}*/
+
+    /*.list li:only-child{background:#2fc0bb}*/
+    /*.list li:empty{background:#2fc0bb}*/
+    .desc{border:1px solid #333;}
+    .desc:first-letter{font-size:30px;font-weight:bold}
+    /*.desc:first-line{background:#ccc}*/
+    .list2 input[type="radio"]{vertical-align:middle;margin-right:10px}
+  </style>
+</head>
+<body>
+  <h1>문서제목용 block</h1>
+  <div>첫번째 block</div>
+  <div class="text">class가 text일 경우</div>
+  <div id="text">id가 text일 경우</div>
+  <ul class="list">
+    <li>두번째 block 리스트1</li>
+    <li>두번째 <span>block</span> 리스트2</li>
+    <li>두번째 <span>block</span> 리스트3</li>
+    <li>두번째 <span>block</span> 리스트4</li>
+  </ul>
+  <ul class="list">
+    <li>두번째 block 리스트1</li>
+    <li></li>
+  </ul>
+  <span>여기엔 span태그가 있습니다.</span>
+  <span>여기엔 span2태그가 있습니다.</span>
+  <p class="desc">세번째 문단용 block 세번째 문단용 block 세번째 문단용 block 세번째 문단용 block세번째 문단용 block 세번째 문단용 block 세번째 문단용 block 세번째 문단용 block세번째 문단용 block 세번째 문단용 block 세번째 문단용 block 세번째 문단용 block</p>
+  <ul class="list2">
+    <li>
+      <input type="radio" id="sel1"><label for="sel1">선택1</label>
+    </li>
+    <li>
+      <input type="radio" id="sel1"><label for="sel1">선택2</label>
+    </li>
+    <li>
+      <input type="radio" id="sel1"><label for="sel1">선택3</label>
+    </li>
+    <li>
+      <input type="radio" id="sel1"><label for="sel1">선택4</label>
+    </li>
+    <li>
+      <input type="text"><label>텍스트 상</label>
+    </li>
+  </ul>
+
+</body>
+</html>

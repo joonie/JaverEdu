@@ -1,0 +1,37 @@
+@charset "utf-8";
+/* NAVER_누구_언제 */
+
+/* Common  
+html{font-size:14px} font-size: 24px
+html,body{height:100%}
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select,figure{margin:0;padding:0;font-family:arial,sans-serif}
+body,input,textarea,select,button,table{font-size:1rem;line-height:1.25em}
+body.s,.s input,.s textarea,.s select,.s button,.s table{font-family:Helvetica}
+body{background-color:#f4f4f4;color:#000;-webkit-text-size-adjust:none}
+img,fieldset,textarea{border:0}
+legend{display:none}
+ul,ol{list-style:none}
+em,address{font-style:normal}
+a{color:#000;text-decoration:none}
+table{border-collapse:collapse}
+hr{display:none !important}
+.blind,.u_hc,.u_skip{visibility:hidden;overflow:hidden;position:absolute;left:-999em;width:0;height:0;font-size:0;line-height:0}
+.u_vc{position: absolute;z-index:-1;font-size:0;line-height:1px;color:transparent}
+*/
+
+img,fieldset,textarea{border:0}
+
+.lang{text-align: right;}
+.logo{text-align: center; font-family: sans-serif; font-weight: bold; font-size: 70px; color: rgb(31,187,1);}
+.contents{margin:auto; width: 600px}
+.logdes{text-align: right; font-size: 8px}
+.blind,.u_hc,.u_skip{visibility:hidden;overflow:hidden;position:absolute;left:-999em;width:0;height:0;font-size:0;line-height:0}
+#container a{text-decoration: none;}
+#footer a,address{text-decoration: none; text-align: center;}
+#insert legend{visibility: hidden;}
+fieldset div input{width:100%;}
+
+#container{}
+#container:after{clear:both;display:block;content:""}
+.left{float:left}
+.right{float:right}
